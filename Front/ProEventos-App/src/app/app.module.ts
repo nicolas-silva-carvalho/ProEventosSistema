@@ -13,6 +13,11 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { TituloComponent } from './shared/titulo/titulo.component';
 import { PalestrantesComponent } from './components/palestrantes/palestrantes.component';
+import { EventoDetalheComponent } from './components/eventos/evento-detalhe/evento-detalhe.component';
+import { EventoListaComponent } from './components/eventos/evento-lista/evento-lista.component';
+import { UserComponent } from './components/user/user.component';
+import { LoginComponent } from './components/user/login/login.component';
+import { RegisterComponent } from './components/user/register/register.component';
 
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
@@ -35,7 +40,12 @@ import { DateTimeFormatPipe } from './helpers/DateTimeFormat.pipe';
     DashboardComponent,
     PerfilComponent,
     TituloComponent,
-    PalestrantesComponent
+    PalestrantesComponent,
+    EventoDetalheComponent,
+    EventoListaComponent,
+    UserComponent,
+    LoginComponent,
+    RegisterComponent
    ],
   imports: [
     BrowserModule,
