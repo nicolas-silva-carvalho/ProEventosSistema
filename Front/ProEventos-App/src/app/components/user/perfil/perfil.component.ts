@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-perfil',
@@ -12,4 +13,15 @@ export class PerfilComponent implements OnInit {
   ngOnInit() {
   }
 
+
+  form!: FormGroup;
+
+  get f(): any {
+    return this.form.controls;
+  }
+
+  public resetForm(event: any): void {
+    event.preventDefault();
+    this.form.reset();
+  }
 }
