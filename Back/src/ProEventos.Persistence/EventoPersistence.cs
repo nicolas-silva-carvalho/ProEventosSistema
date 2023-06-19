@@ -49,7 +49,7 @@ namespace ProEventos.Persistence
             return await query.ToArrayAsync();
         }
 
-        public async Task<Evento> GetAllEventoByIdAsync(int EventoId, bool includePalestrante = false)
+        public async Task<Evento> GetEventoByIdAsync(int EventoId, bool includePalestrante = false)
         {
             IQueryable<Evento> query = _contexto.Eventos.Include(evento => evento.Lotes).Include(evento => evento.RedesSociais);
 
