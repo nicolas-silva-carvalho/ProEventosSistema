@@ -46,11 +46,11 @@
         <td>{{evento.id}}</td>
         <td>{{evento.tema}}</td>
         <td class="d-none d-md-table-cell">{{evento.local}}</td>
-        <td>{{evento.dataEvento | DateTimeFormat}}</td>
+        <td>{{evento.dataEvento}}</td>
         <td class="d-none d-md-table-cell">{{evento.qtdPessoas}}</td>
-        <td class="d-none d-md-table-cell">{{evento.lotes[0]}}</td>
+        <td class="d-none d-md-table-cell">{{evento.lotes}}</td>
         <td>
-          <button type="button" class="btn btn-danger btn-lg" (click)="openModal(template)">
+          <button type="button" class="btn btn-danger btn-lg" (click)="openModal($event, template, evento.id)">
             <i class="fa-solid fa-trash-can"></i>
           </button>
         </td>
@@ -67,7 +67,7 @@
 </div>
 <ng-template #template>
   <div class="modal-body text-center">
-    <p>Tem certeza que quer deletar este evento?</p>
+    <p>Tem certeza que quer deletar o Evento de Código {{this.eventoId}} ?</p>
     <button type="button" class="btn btn-default" (click)="confirm()">Sim</button>
     <button type="button" class="btn btn-primary" (click)="decline()">Não</button>
   </div>
